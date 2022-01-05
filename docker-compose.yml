@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  backend:
+    container_name: backend-1         
+    image: pramadi/backend:2
+    ports:
+      - 5000:5000
+    environment:
+      sequelize db:migrate
+  database:
+    container_name: database-1
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_DATABASE: dumbflix
+    ports:
+      - 3306:3306
+    volumes:
+      - "/home/ubuntu/mysql-folder:/var/lib/mysql"
+
