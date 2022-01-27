@@ -1,5 +1,5 @@
 FROM node:14
-WORKDIR /DW16WYD0W-APP-DUMPLAY/client
+WORKDIR /app
 COPY . .
 RUN npm install
 EXPOSE 5000

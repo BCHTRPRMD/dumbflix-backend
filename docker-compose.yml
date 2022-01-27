@@ -4,9 +4,7 @@ services:
     container_name: backend-1         
     image: pramadi/backend:2
     ports:
-      - 5000:5000
-    environment:
-      sequelize db:migrate
+      - 5000:500
   database:
     container_name: database-1
     image: mysql:latest
